@@ -23,6 +23,7 @@ class _MyAppState extends State {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Hello App',
       home: Scaffold(
         body: Column(
