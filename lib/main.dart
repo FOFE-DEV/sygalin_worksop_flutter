@@ -21,6 +21,9 @@ class _MyAppState extends State {
       debugShowCheckedModeBanner: false,
       title: 'Hello App',
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("Save data"),
+        ),
         body: Container(
           margin: EdgeInsets.only(top: 25, left: 8, right: 8),
           child: Form(
