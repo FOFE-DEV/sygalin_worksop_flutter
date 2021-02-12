@@ -15,7 +15,12 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        body: Text("hello Sygalin"),
+        body: Text(
+          "hello Sygalin",
+          style: TextStyle(
+            fontSize: 40,
+          ),
+        ),
       ),
     );
   }
