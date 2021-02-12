@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(MyApp());
@@ -76,7 +77,7 @@ class _MyAppState extends State {
                   onPressed: () {
                     print("hello");
                     if (_formKey.currentState.validate()) {
-                      print(_email);
+                      _save();
                     }
                   },
                   child: Container(
@@ -89,11 +90,52 @@ class _MyAppState extends State {
                     ),
                   ),
                 ),
+                Card(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ListTile(
+                        leading: Icon(Icons.person),
+                        title: Text('My profil'),
+                        subtitle: Row(
+                          children: [
+                            Text(_name),
+                            SizedBox(
+                              width: 25,
+                            ),
+                            Text(_email),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                RaisedButton(
+                  child: Text('readData'),
+                  onPressed: () {
+                    _read();
+                  },
+                ),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  _save() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString('name', _name);
+    prefs.setString('email', _email);
+  }
+
+  _read() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _email = prefs.getString('email');
+      _name = prefs.getString('name');
+    });
+    print('$_email');
   }
 }
