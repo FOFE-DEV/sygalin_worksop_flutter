@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Text("hello Sygalin"),
+      home: Scaffold(
+        body: Text("hello Sygalin"),
+      ),
     );
   }
 }
