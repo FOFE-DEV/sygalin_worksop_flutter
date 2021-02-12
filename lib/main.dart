@@ -29,13 +29,20 @@ class _MyAppState extends State {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(
-              child: Text(
-                _sentence,
-                style: TextStyle(
-                  color: _changed ? Colors.purple : Colors.green,
-                  fontSize: 20.0,
+            Container(
+              child: Center(
+                child: Text(
+                  _sentence,
+                  style: TextStyle(
+                    color: _changed ? Colors.white : Colors.black,
+                    fontSize: 20.0,
+                  ),
                 ),
+              ),
+              height: 200,
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.circular(12),
               ),
             ),
             SizedBox(
