@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sygalin_worksop_flutter/pages/login/loginForm.dart';
 
 class Login extends StatelessWidget {
   const Login({Key key}) : super(key: key);
@@ -24,6 +25,7 @@ class Login extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
+            LoginForm(),
           ],
         ),
       ),
