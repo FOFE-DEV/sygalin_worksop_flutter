@@ -12,12 +12,19 @@ class Login extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        child: Container(
-          margin: EdgeInsets.only(top: 60),
-          height: 100,
-          child: Center(
-            child: Image.network('http://me.fofe.cm/images/U/sygalin.png'),
-          ),
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 60),
+              height: 100,
+              child: Center(
+                child: Image.network('http://me.fofe.cm/images/U/sygalin.png'),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+          ],
         ),
       ),
     );
