@@ -15,10 +15,16 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        body: Text(
-          "hello Sygalin",
-          style: TextStyle(
-            fontSize: 40,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "hello Sygalin",
+                style: TextStyle(fontSize: 40, color: Colors.red),
+              ),
+              Text("hello"),
+            ],
           ),
         ),
       ),
