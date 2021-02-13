@@ -27,13 +27,8 @@ class _MyAppState extends State {
         appBar: AppBar(
           title: Text("Save data"),
           actions: [
-            IconButton(
-                icon: Icon(Icons.add),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Myimage()));
-                }),
-            IconButton(icon: Icon(Icons.add_business), onPressed: null),
+            IconButton(icon: Icon(Icons.add), onPressed: () {}),
+            IconButton(icon: Icon(Icons.add_business), onPressed: () {}),
           ],
         ),
         body: Container(
