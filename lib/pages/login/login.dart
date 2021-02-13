@@ -11,6 +11,15 @@ class Login extends StatelessWidget {
         backgroundColor: Colors.black,
         centerTitle: true,
       ),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.only(top: 60),
+          height: 100,
+          child: Center(
+            child: Image.network('http://me.fofe.cm/images/U/sygalin.png'),
+          ),
+        ),
+      ),
     );
   }
 }
